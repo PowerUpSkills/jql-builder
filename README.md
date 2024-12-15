@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# JQL Query Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An intuitive, interactive tool for building and understanding JIRA Query Language (JQL) queries. This project transforms complex JQL syntax into human-readable explanations, making JIRA filtering accessible to both novice and experienced users.
 
-## Available Scripts
+![JQL Builder Interface](https://raw.githubusercontent.com/YOUR_USERNAME/jql-builder/main/public/preview.png)
 
-In the project directory, you can run:
+## 🚀 Live Demo
+Experience the tool in action: [JQL Query Builder](https://YOUR_USERNAME.github.io/jql-builder)
 
-### `npm start`
+## 🎯 Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Interactive Query Building**: Construct JQL queries through an intuitive interface
+- **Real-time Plain English Explanations**: Understand exactly what your query will do
+- **Multi-condition Support**: Build complex filters using AND/OR operators
+- **Smart Field Handling**: Automatic formatting for different field types (dates, text, etc.)
+- **Visual Feedback**: Clear indication of how conditions combine
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Technology Stack
 
-### `npm test`
+- React 18
+- Tailwind CSS
+- Create React App
+- GitHub Pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚦 Getting Started
 
-### `npm run build`
+### Prerequisites
+- Node.js (LTS version recommended)
+- npm or yarn
+- Git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Local Development
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/jql-builder.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Navigate to project directory
+cd jql-builder
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install dependencies
+npm install
 
-### `npm run eject`
+# Start development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Building for Production
+```bash
+# Create optimized production build
+npm run build
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Deploy to GitHub Pages
+npm run deploy
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Usage Examples
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Simple Project Filter**
+   ```sql
+   project = "MOBILE" AND status = "In Progress"
+   ```
+   Finds all in-progress issues in the MOBILE project
 
-## Learn More
+2. **Complex Multi-condition Query**
+   ```sql
+   project IN ("WEB", "API") AND status != "Done" AND priority >= "High"
+   ```
+   Locates high-priority, incomplete issues across web and API projects
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔧 Customization
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Adding New Fields
+Extend `constants.js` to include additional JIRA fields:
+```javascript
+export const FIELDS = [
+  'project',
+  'issuetype',
+  // Add your custom fields here
+];
+```
 
-### Code Splitting
+### Modifying Operators
+Customize available operators in `constants.js`:
+```javascript
+export const OPERATORS = [
+  '=', '!=', 'IN',
+  // Add custom operators
+];
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Contributing
 
-### Analyzing the Bundle Size
+We welcome contributions! Here's how you can help:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Making a Progressive Web App
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Advanced Configuration
+## 🙏 Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Inspired by JIRA's advanced search capabilities
+- Built with React and Tailwind CSS communities' best practices
+- Special thanks to all contributors and users providing feedback
 
-### Deployment
+## 📞 Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Create an issue for bug reports or feature requests
+- Star the repository if you find it useful
+- Fork it to contribute or create your own version
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ by JayDee
