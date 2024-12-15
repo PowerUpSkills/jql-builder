@@ -1,0 +1,8 @@
+# Open package.json and add:
+{
+  "homepage": "https://PowerUpSkills.github.io/jql-builder",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
