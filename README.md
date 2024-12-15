@@ -2,8 +2,6 @@
 
 An intuitive, interactive tool for building and understanding JIRA Query Language (JQL) queries. This project transforms complex JQL syntax into human-readable explanations, making JIRA filtering accessible to both novice and experienced users.
 
-![JQL Builder Interface](https://raw.githubusercontent.com/YOUR_USERNAME/jql-builder/main/public/preview.png)
-
 ## 🚀 Live Demo
 Experience the tool in action: [JQL Query Builder](https://YOUR_USERNAME.github.io/jql-builder)
 
@@ -32,7 +30,7 @@ Experience the tool in action: [JQL Query Builder](https://YOUR_USERNAME.github.
 ### Local Development
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/jql-builder.git
+git clone https://github.com/PowerUpSkills/jql-builder.git
 
 # Navigate to project directory
 cd jql-builder
@@ -61,6 +59,9 @@ npm run deploy
    ```
    Finds all in-progress issues in the MOBILE project
 
+![JQL Builder Interface](./JQL-Builder.png)
+*The interface provides immediate feedback on your query construction, helping you understand exactly what your filter will do.*
+
 2. **Complex Multi-condition Query**
    ```sql
    project IN ("WEB", "API") AND status != "Done" AND priority >= "High"
@@ -87,6 +88,15 @@ export const OPERATORS = [
   // Add custom operators
 ];
 ```
+
+## 💡 Implementation Notes
+
+The JQL Builder is designed with real-world JIRA workflows in mind. Key implementation features include:
+
+- **Intelligent Field Recognition**: Automatically formats values based on field type
+- **Context-Aware Operators**: Shows only relevant operators for each field
+- **Real-time Validation**: Prevents common JQL syntax errors
+- **Responsive Design**: Works seamlessly across desktop and tablet devices
 
 ## 🤝 Contributing
 
@@ -116,4 +126,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Built with ❤️ by JayDee
+Built with ❤️ by [Your Name]
