@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jql-builder/static/css/main.558fd8fd.css",
+    "main.js": "/jql-builder/static/js/main.3d981da1.js",
+    "static/js/453.12ff292c.chunk.js": "/jql-builder/static/js/453.12ff292c.chunk.js",
+    "index.html": "/jql-builder/index.html",
+    "main.558fd8fd.css.map": "/jql-builder/static/css/main.558fd8fd.css.map",
+    "main.3d981da1.js.map": "/jql-builder/static/js/main.3d981da1.js.map",
+    "453.12ff292c.chunk.js.map": "/jql-builder/static/js/453.12ff292c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.558fd8fd.css",
+    "static/js/main.3d981da1.js"
+  ]
+}
